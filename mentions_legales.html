@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Pharmacie Lorgues</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <script src="myScript.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+    </head>
+
+    <nav>
+
+      <div id="header">
+        <p id="headerText">Votre Pharmacie de Lorgues situé dans le Var (83510) </p>
+          <img id="facebook" src="img/Facebook.png" width="32px" height="32px">
+          <img id="twitter" src="img/Twitter.png" width="32px" height="32px">
+          <img id="mail" src="img/mail2.png" width="32px" height="32px">
+      </div>
+
+      <img id="logo" src="img/logoPharmacie.jpg" />
+      <img id="logoCroix" src="img/logoCroix200px.png" />
+
+      <ul id="main">
+        <li> <a id="Acceuil" href="MignotWebSite.html">Acceuil</a></li>
+        <li><a id="equipe" href="equipe.html">équipe</a></li>
+        <li><a id="Planning" href="Planning/planning.php">Planning</a></li>
+        <li>Marques</li>
+        <li>Services
+          <ul class="drop">
+            <div>
+            <li><a href="services/ordonnance.html">Ordonnance en ligne</a></li>
+            <li><a href="services/livraison.html">Livraison à domicile</a></li>
+            <li><a href="services/garde.html">Service de garde</a></li>
+            </div>
+          </ul>
+        </li>
+        <li> <a id="ContactUs" href="ContactUs.php">Contact</a></li>
+        <li></li>
+        <li></li>
+        <div id="marker"></div>
+      </ul>
+    </nav>
+
+ 
+	<div class="marge"> </div>
+			<div class="container">
+          <div class="row header">
+			<h1>MENTIONS LÉGALES : <h1>
+			</div>
+
+				<div class="column_ml">
+
+					<h2>Informations sur notre identité : </h2>
+
+					<p>Raison Sociale :</p>
+					<p>Forme Juridique : Nom Propre</p>
+					<p>Adresse de l'établissement : 1 avenue de Toulon</p>
+					<p>Code Postal : 83510 , Lorgues </p>
+					</br>
+
+					<p>Descriptif de l'établissement :</p>
+				    <p>N°SIREN : 423 655 950 </p>
+					<p>Commerce de détail de produits pharmaceutiques en magasin spécialisé  (Code APE 4773 Z) </p>
+					<p>R.C.S. DRAGUIGNAN 423 655 950</p>
+
+					</br>
+					<p>Contact :</p>
+					<p>Numéro de téléphone : 04 94 73 72 97  </p>
+					<p>Fax : 04 94 84 36 48 </p>
+					<p>Adresse email : pharmacie-stferreol@outlook.fr </p>
+
+					</br>
+					<p>Dénomination : Pharmacie St Ferréol </p>
+					<p>Numéro de TVA intercommunautaire : FR 45 423 655 950 000 24</p>
+
+					<h2> Informations réglementaires </h2>
+
+					<p>Pharmacien titulaire :</p>
+					<p>Monsieur MIGNOT Benoît </p>
+					</br>
+					<p>Conjoint Collaborateur :</p>
+					<p>Madame MIGNOT Monique </p>
+
+					</div>
+			</div>
+		</div>
+		<footer>
+
+<div id="footer-info">
+  <div id="footerZone">
+        <p id="p1"> Où nous trouver ?</p>
+        <p id="p2">Pharmacie Saint Férréol<br>1 Avenue de Toulon<br>83510 Lorgues<br><br>Téléphone: 04 94 73 72 97<br>Fax: 04 94 84 36 48<br>Email: pharmacie-stferreol@outlook.fr</p>
+        <div id="block2">
+          <ul>
+            <li><a href="services/ordonnance.html">Ordonnance en ligne</a></li>
+            <li><a href="services/livraison.html">Livraison à domicile</a></li>
+            <li><a href="services/garde.html">Service de garde</a></li>
+          </ul>
+        </div>
+    <div id="Gmap">
+    <div id="map">
+      <script>
+      function initMap() {
+        var myLatLng = {lat: 43.493127, lng: 6.358338};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8PLo06eCIatA-K4ute1zwzZ96QncKiGk&signed_in=true&callback=initMap"></script>
+  </div>
+</div>
+</div>
+</div>
+<div id="footer-links">
+  <div id="links">
+    <ul>
+      <li>Mentions légales</li>
+    </ul>
+    <ul>
+      <li>©2016-2016 Pharmacie St Ferréol</li>
+    </ul>
+    <ul>
+      <li>Nous contacter</li>
+    </ul>
+  <div>
+</div>
+
+</footer>
+	</body>
+</html>

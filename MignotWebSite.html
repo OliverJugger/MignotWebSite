@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Pharmacie Lorgues</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css" />
+        <script src="myScript.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
+    </head>
+
+    <nav>
+      <div id="header">
+        <p id="headerText">Votre Pharmacie de Lorgues situé dans le Var (83510) </p>
+          <img id="facebook" src="img/Facebook.png" width="32px" height="32px">
+          <img id="twitter" src="img/Twitter.png" width="32px" height="32px">
+          <img id="mail" src="img/mail2.png" width="32px" height="32px">
+      </div>
+
+      <img id="logo" src="img/logoPharmacie.jpg" />
+      <img id="logoCroix" src="img/logoCroix200px.png" />
+
+      <ul id="main">
+        <li> <a id="Acceuil" href="MignotWebSite.html">Acceuil</a></li>
+        <li><a id="equipe" href="equipe.html">équipe</a></li>
+        <li><a id="Planning" href="Planning/planning.php">Planning</a></li>
+        <li>Marques</li>
+        <li>Services
+          <ul class="drop">
+            <div>
+            <li><a href="services/ordonnance.html">Ordonnance en ligne</a></li>
+            <li><a href="services/livraison.html">Livraison à domicile</a></li>
+            <li><a href="services/garde.html">Service de garde</a></li>
+            </div>
+          </ul>
+        </li>
+        <li> <a id="ContactUs" href="ContactUs/ContactUs.php">Contact</a></li>
+        <li></li>
+        <li></li>
+        <div id="marker"></div>
+      </ul>
+    </nav>
+
+    <script>
+        jQuery(document).ready(function ($) {
+
+            var jssor_1_SlideshowTransitions = [
+              {$Duration:1200,$Opacity:2}
+            ];
+
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $SlideshowOptions: {
+                $Class: $JssorSlideshowRunner$,
+                $Transitions: jssor_1_SlideshowTransitions,
+                $TransitionsOrder: 1
+              },
+              $ArrowNavigatorOptions: {
+                $Class: $JssorArrowNavigator$
+              },
+              $BulletNavigatorOptions: {
+                $Class: $JssorBulletNavigator$
+              }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 960);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+
+    <style>
+
+        /* jssor slider bullet navigator skin 05 css */
+        /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+        .jssorb05 {
+            position: absolute;
+        }
+        .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+            position: absolute;
+            /* size of bullet elment */
+            width: 16px;
+            height: 16px;
+            background: url('img/b05.png') no-repeat;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .jssorb05 div { background-position: -7px -7px; }
+        .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+        .jssorb05 .av { background-position: -67px -7px; }
+        .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+        .jssora12l, .jssora12r {
+            display: block;
+            position: absolute;
+            /* size of arrow element */
+            width: 30px;
+            height: 46px;
+            cursor: pointer;
+            background: url('img/a12.png') no-repeat;
+            overflow: hidden;
+        }
+        .jssora12l { background-position: -16px -37px; }
+        .jssora12r { background-position: -75px -37px; }
+        .jssora12l:hover { background-position: -136px -37px; }
+        .jssora12r:hover { background-position: -195px -37px; }
+        .jssora12l.jssora12ldn { background-position: -256px -37px; }
+        .jssora12r.jssora12rdn { background-position: -315px -37px; }
+    </style>
+
+
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 960px; height: 400px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 960px; height: 400px; overflow: hidden;">
+            <div data-p="112.50" style="display: none;">
+                <a href="services/ordonannce.html"><img data-u="image" src="img/OrdonnanceEnLigne.jpg" /> </a>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <a href="services/livraison.html"><img data-u="image" src="img/LivraisonADomicile.jpg" /></a>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <a href="services/garde.html"><img data-u="image" src="img/serviceDeGarde2.jpg" /></a>
+            </div>
+            <div data-p="112.50" style="display: none;">
+                <img data-u="image" src="img/PharmacieLorguesReal.jpg" />
+            </div>
+
+        </div>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+            <!-- bullet navigator item prototype -->
+            <div data-u="prototype" style="width:16px;height:16px;"></div>
+        </div>
+        <!-- Arrow Navigator -->
+        <span data-u="arrowleft" class="jssora12l" style="top:0px;left:0px;width:30px;height:46px;" data-autocenter="2"></span>
+        <span data-u="arrowright" class="jssora12r" style="top:0px;right:0px;width:30px;height:46px;" data-autocenter="2"></span>
+    </div>
+
+<div id="topMarques">
+  NOS TOP MARQUES
+</div>
+<div id="marquesContainer">
+  <div id="logosMarques"><img src="img/allLogos2.png" /></div>
+</div>
+
+<div id="midContainer">
+
+  <div id="treeFooter"> <img src="img/treeFooter.png" /> </div>
+  <p>
+  <FONT color=#3E8760 size="5px">Votre pharmacie St Ferréol</FONT><br><br>
+  Située au 1, Avenue de Toulon dans la ville de Lorgues, la Pharmacie St Ferréol vous accueille et vous présente un large choix de produits de pharmacie et de parapharmacie.<br>
+  Notre équipe de professionnels vous reçoit et vous conseille dans le choix de gammes de produits de santé, de beauté et de bien-être pour toute la famille.<br>
+  Si vous préférez les médecines naturelles, nous pourrons vous orienter vers l’homéopathie, la phytothérapie , l'aromathérapie, et les produits diététiques.<br><br>
+  <FONT color=#3E8760 size="5px">Un large choix de produits</FONT><br><br>
+  Nous vous proposons également du matériel médical, orthopédique ainsi que des produits de maintien à domicile. Vous trouverez également des produits vétérinaires pour vos animaux de compagnie.
+  Voir nos <strong>marques</strong>.<br>
+  Pour plus d'informations, nous vous invitons à consulter les mentions légales relatives à notre pharmacie et son site internet.<br><br>
+  <FONT color=#3E8760 size="5px">Les horaires</FONT><br><br>
+  Ouverte du Lundi au Samedi de 8h45 a 19h.<br>
+  Voir notre <strong>planning</strong>.</p>
+</div>
+<footer>
+
+<div id="footer-info">
+  <div id="footerZone">
+        <p id="p1"> Où nous trouver ?</p>
+        <p id="p2">Pharmacie Saint Férréol<br>1 Avenue de Toulon<br>83510 Lorgues<br><br>Téléphone: 04 94 73 72 97<br>Fax: 04 94 84 36 48<br>Email: pharmacie-stferreol@outlook.fr</p>
+        <div id="block2">
+          <ul>
+            <li><a href="services/ordonnance.html">Ordonnance en ligne</a></li>
+            <li><a href="services/livraison.html">Livraison à domicile</a></li>
+            <li><a href="services/garde.html">Service de garde</a></li>
+          </ul>
+        </div>
+    <div id="Gmap">
+    <div id="map">
+      <script>
+      function initMap() {
+        var myLatLng = {lat: 43.493127, lng: 6.358338};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8PLo06eCIatA-K4ute1zwzZ96QncKiGk&signed_in=true&callback=initMap"></script>
+  </div>
+</div>
+</div>
+</div>
+<div id="footer-links">
+  <div id="links">
+    <ul>
+      <li><a id="Mentions" href="mentions_legales.html">Mentions légales</a></li>
+    </ul>
+    <ul>
+      <li>©2016-2016 Pharmacie St Ferréol</li>
+    </ul>
+    <ul>
+      <li>Nous contacter</li>
+    </ul>
+  <div>
+</div>
+
+</footer>
+
+</html>
