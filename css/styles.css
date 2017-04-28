@@ -585,6 +585,9 @@ table thead {
   height : 65px;
 }
 table thead tr th {
+    padding-top : 5px;
+  margin-top : 5px;
+  padding-bottom : 5px;
   background: #626E7E;
   color: #d1d5db;
   padding: 0.5em;
@@ -597,6 +600,7 @@ table thead tr th:last-child {
   border-radius: 0 3px  0 0;
 }
 table thead tr th .day {
+
   display: block;
   font-size: 1.2em;
   border-radius: 50%;
@@ -619,6 +623,7 @@ table thead tr th i {
 }
 table tbody tr {
   background: #d1d5db;
+
 }
 table tbody tr:nth-child(n) td:nth-child(1) {
   background-color : #c8cdd4;

@@ -24,7 +24,7 @@ require 'header.php'
       <img id="logoCroix" src="../img/logoCroix200px.png" />
 
       <ul id="main">
-        <li> <a class="Acceuil" href="../MignotWebSite.html">Acceuil</a></li>
+        <li> <a id="Acceuil" href="../MignotWebSite.html">Acceuil</a></li>
         <li><a id="equipe" href="../equipe.html">équipe</a></li>
         <li><a id="Planning" href="#">Planning</a></li>
         <li>Marques</li>

@@ -601,6 +601,13 @@ form small {
   text-align: center;
 }
 
+#Planning {
+  text-decoration:none;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  text-align: center;
+}
+
 #links {
   font-family: 'Open Sans', sans-serif;
   color: white;
